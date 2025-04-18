@@ -52,32 +52,58 @@ Go to your control panel. From the control panel open up programs. Select, Turn 
 <img src="https://i.imgur.com/suB07eu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/P8VrExq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="https://i.imgur.com/4WyTJl6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Install / enable IIS in Windows with CGI and Common HTTP Features, make sure all Common HTTP Features are checked.
+World Wide Web Services -> Application Development Features -> [X] CGI [X] Common HTTP Features:  <br/>
+<img src="https://i.imgur.com/jRFBGhm.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/UMKNpAK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+To make sure the IIS is installed / enabled go to a browser of your choice and search for 127.0.0.1 It should look like this:  <br/>
+<img src="https://i.imgur.com/m4RzlTH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+1. From the Installation Files, download and install PHP Manager for IIS (PHPManagerForIIS_V1.5.0) Go through the install wizard and complete the install. <br />
+<br />
+2. From the Installation Files, download and install the Rewrite Module (rewrite_amd64_en-US). <br />
+<br />
+3. Create a folder in the C drive called PHP. <br />
+<br />
+4. From the Installation Files, download PHP 7.3.8 (php-7.3.88-nts-Win32-VC15-x866.zip) and unzip the contents into C:\PHP <br />
+<img src="https://i.imgur.com/1c1MLAb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://i.imgur.com/7xRJ67X.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Download and install the VC_redist.x86.exe from the installation files. Go through the setup wizard to finish setting up and installing the VC_redist.x86.exe. <br />
+<br />
+Download and install MySQL 5.5.62 (mysql-5.5.62-win32.msi) Run the setup wizard: Typical Setup -> Launch Configuration Wizard (after install) -> Standard Configuration -> <br />
+<br />
+Create a password: <br />
+<img src="https://i.imgur.com/O3ScTzo.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Ececute the process on the next page:
+<img src="https://i.imgur.com/6omFGyv.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://i.imgur.com/1c1MLAb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+<img src="https://i.imgur.com/1c1MLAb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+<img src="https://i.imgur.com/1c1MLAb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+
+
+
   
   
   Observe the wiped disk:  <br/>
