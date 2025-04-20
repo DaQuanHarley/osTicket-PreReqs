@@ -92,24 +92,143 @@ Ececute the process on the next page:
 <img src="https://i.imgur.com/6omFGyv.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="https://i.imgur.com/1c1MLAb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-
-
-<img src="https://i.imgur.com/1c1MLAb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-
-
-<img src="https://i.imgur.com/1c1MLAb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-
-
-
-
-
-  
-  
-  Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Search for IIS in the windows search bar. Open IIS as an administrator. The program should look like this:
+<img src="https://i.imgur.com/FfFLWNi.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Register PHP from within IIS. Click on PHP Manager:
+<img src="https://i.imgur.com/jrpwfPY.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Register new PHP version:
+<img src="https://i.imgur.com/HErPI3l.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Provide a path to the php executable file (php-cgi.exe)). Go to C Drive -> PHP -> click on php-cgi file:
+<img src="https://i.imgur.com/nFQfCiO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Restart the IIS server: <br />
+<img src="https://i.imgur.com/tUsuef2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+ Install osTicket v1.15.8 -Download osTicket from the Installation Files Folder -Extract and copy "upload" folder to c:\inetpub\wwwroot -Within c:\inetpub\root, Rename "upload" to "osTicket"
+<br />
+Reload IIS again.
+<br />
+On IIS go to sites -> Default -> osTicket -On the right, click “Browse *:80”: <br />
+<img src="https://i.imgur.com/FhQxTa4.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Some extensions are not enabled on the osTicket browser:
+<img src="https://i.imgur.com/eFADQWT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Enable the extensions: -Go back to IIS, sites -> Default -> osTicket -Double click PHP manager -Click "Enable or disable an extension": <br />
+<img src="https://i.imgur.com/uzEW1PA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<img src="https://i.imgur.com/eTHWSdM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+enable three extensions.
+<br />
+<br />
+1.) php_imap.dll
+<br />
+<br />
+2.) php_intl.dll
+<br />
+<br />
+3.) php_opcache.dll:
+<br />
+<img src="https://i.imgur.com/oEIyqQd.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Rename one of the files in our osTicket folder. Go into the file explorer and search for C;\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php
+<br />
+<br />
+Rename the ost-sampleconfig.php to ost-config.php
+<br />
+<br />
+Right click on the file and go to properties. Click security, click on advance, and disable the inheritance. Select Remove all inherited permissions from this object.
+<br />
+<br />
+Add new permissions.
+<br />
+<br />
+Click Add:
+<br />
+<img src="https://i.imgur.com/9qTQvYu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Select a principal: <br />
+<img src="https://i.imgur.com/YwspbyD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Type "Everyone" in the box (Only type Everyone for this Example):
+<img src="https://i.imgur.com/0Rbw93k.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Make sure Full Control and all the other boxes are checked:
+<img src="https://i.imgur.com/b12W29J.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Click Apply and Ok: <br />
+<img src="https://i.imgur.com/gnvcl4M.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Setup osTicket in the browser. Click Continue on the osTicket browser page. Fill out the page as required except the Database Settings at the bottom of the page. We will get to that.
+<br />
+<br />
+Download and install HeidiSQL from the Installation Files:
+<img src="https://i.imgur.com/2zYUWnk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Create a new session in it:
+<img src="https://i.imgur.com/IgOXxu8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Make sure the username is root and the password is ROOT:
+<img src="https://i.imgur.com/2YRxrOa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Go back to the browser to finish setting everything up. Under the Database Settings in the browser the username will be root and the password will be ROOT.
+<br />
+<br />
+Create a new database within HeidiSQL. In Heidi right click on the left side where is says "Unnamed", select "create new", and then select "database". Name the new database osTicket. Once we have the new database setup go back to the osTicket browser and under MySQL Database type in osTicket:
+<img src="https://i.imgur.com/zXFKxa2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+Login to osTicket on the browser:
+<img src="https://i.imgur.com/MIUPGx6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://i.imgur.com/TQbjuWv.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+End user view: <br />
+<img src="https://i.imgur.com/OC85eok.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+osTicket has now been successfully installed!
 </p>
 
+<h2>Cleanup:</h2>
+
+<p align="center">
+Delete the setup folder in our system. -Delete: C:\inetpub\wwwroot\osTicket\setup Only delete the setup folder and nothing else.
+<br />
+<br />
+Set the permissions back to "Read" only in the ost-config.php file:
+<br />
+<img src="https://i.imgur.com/yEeLiva.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+<img src="https://i.imgur.com/E5JehE5.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+</p>
 <!--
  ```diff
 - text in red
