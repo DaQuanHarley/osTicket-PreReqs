@@ -7,7 +7,7 @@ This is my demonstration on the prerequisites and installation of the open-sourc
 
 <h2>Operating Systems Used</h2>
 
-- <b>MacOS (Sequoia 15.4)<b>
+- <b>Windows 10 Pro, version 22H2<b>
 
 
 <h2>Environments and Technologies Used</h2>
